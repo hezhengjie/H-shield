@@ -1,0 +1,22 @@
+{
+    "name": "Spread Shield",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Baidu Spread Shield",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Baidu Spread Shield"
+    },
+    "icons":{
+        "48":"icon48.png"
+    },
+    "permissions": ["tabs"],
+    "content_scripts": [
+        {
+            "matches": ["http://*.baidu.com/*","https://*.baidu.com/*"],
+            "js": ["js/jquery.js","js/popup.js"],
+            "run_at":"document_end"
+        }
+    ]
+
+}
